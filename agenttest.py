@@ -13,11 +13,11 @@ from grop import create_group, display_groups, add_roadmap_to_group, display_gro
 from homefeeds import run_feed, init_state, predefined_roadmaps
 
 # APIs and tokens (use environment variables for security)
-API_KEYS = "AIzaSyA1eCKEsWwdZ_5E4xGz0JVGf-JcU2G9h_M"
+API_KEY = "AIzaSyA1eCKEsWwdZ_5E4xGz0JVGf-JcU2G9h_M"
 
-GROQ_API_KEYS = "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"
+GROQ_API_KEY = "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"
 
-HUGGINGFACEHUB_API_TOKENS = "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"
+HUGGINGFACEHUB_API_TOKEN = "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"
 
 
 
