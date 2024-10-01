@@ -4,7 +4,7 @@ import requests
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from langchain_groq import ChatGroq
-from streamlit_lottie import st_lottie
+
 from Quicklearn import process
 from geminifunc import get_gemini_repsonse, input_pdf_text
 from feed import display_popular_feed_item, display_uploaded_roadmap
@@ -20,12 +20,7 @@ HUGGINGFACEHUB_API_TOKEN = "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"
 
 st.set_page_config(page_title="AI Career Guidance", page_icon="🚀", layout="wide")
 
-# Lottie Animation Function
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+
 
 # Placeholder for predictive analytics (mock)
 def predict_future_career(user_data):
@@ -184,12 +179,7 @@ if st.sidebar.button("Submit Comment"):
         st.success("Thank you for your feedback!")
         st.sidebar.write(comment)
 
-# Load Lottie animations
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+
 
 # Home Page
 if page == "Home":
