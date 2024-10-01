@@ -158,87 +158,12 @@ def process(search_query):
     opid=result['videoId']
     st.video(f"https://www.youtube.com/watch?v={opid}")
 
-st.set_page_config(page_title="AI-Enhanced YouTube Video Selector", page_icon="🎥", layout="wide")
 
-page = st.sidebar.selectbox(
-    "Navigate",
-    ["Home", "Expert Videos", "Future Updates", "About"]
-)
-
-st.sidebar.subheader("Leave Your Feedback 💬")
-comment = st.sidebar.text_area("Your Comment:")
-if st.sidebar.button("Submit Comment"):
-        if comment:
-            st.success("Thank you for your feedback! 🙌")
-            # Here you would handle the comment submission, e.g., saving to a database or file
-        else:
-            st.error("Please enter a comment before submitting.")
             
             
 
-if page == "Home":
-    st.title("Select-Stream AI 🎥")
-    st.write(
-        """
-        Welcome to the **Select-Stream AI 🎥**! This tool is designed to help you find the most informative and concise YouTube videos on any topic quickly and optimally.
-
-       
-        """
-    )
-
-    query = st.text_input("What You Wanna Learn Today? 🤔")
-
-    if st.button("Find Best Video"):
-        if query:
-            st.write("Processing your query...")
-            process(query)
-            st.write("Best video details will be displayed here.") 
-        else:
-            st.error("Please enter a search query.")
 
 
 
-elif page == "Future Updates":
-    st.title("Future Updates 🚀")
-    st.write(
-        """
-        ### Upcoming Features and Improvements
 
-        We are continuously working to enhance the AI-Enhanced YouTube Video Selector. Here's a glimpse of what's coming next:
 
-        - 🧠 **Enhanced AI Models:** Integration of more advanced language models for even better video recommendations.
-        - 📚 **Expanded Video Library:** Additional expert-curated videos and educational content.
-        - 🎛️ **User Customization:** Options for users to customize their learning experience and video preferences.
-        - 🖥️ **Improved Interface:** Refined user interface for an even more intuitive experience.
-
-        Stay tuned for more updates as we strive to provide you with the best tools for optimized learning!
-        """
-    )
-
-elif page == "About":
-    st.title("About 📘")
-    st.write(
-        """
-        ## AI-Enhanced YouTube Video Selector for Optimal Learning
-
-        Supercharge your learning experience with our AI-powered YouTube video selector, designed to help beginners quickly and optimally find the best content on any topic. This innovative Python script integrates advanced technologies from Google, Hugging Face, and Groq to search for YouTube videos, retrieve their transcripts, and analyze them using cutting-edge language models.
-
-        ### Features:
-        - 🔍 **YouTube Video Search:** Effortlessly find top videos related to your learning topic using the YouTube Data API.
-        - 📝 **Transcript Retrieval:** Automatically fetch and compile transcripts of selected videos for in-depth analysis.
-        - 🤖 **AI-Driven Analysis:** Leverage state-of-the-art language models from Hugging Face and Groq to generate insightful questions and evaluate transcript quality.
-        - 🚀 **Optimal Learning Recommendation:** Identify the most comprehensive and concise video, ensuring a fast and efficient learning process tailored to beginners.
-
-        Boost your learning efficiency with this intelligent tool that brings precision and speed to video analysis. Perfect for students, educators, and anyone eager to enhance their knowledge with the best available content on YouTube.
-
-        ### Author:
-        - [VIGNESHWARAN](vign22112.it@rmkec.ac.in)
-        - [THARUN KARTHICK](karthicktharun11@gmail.com)
-
-        ### Contact:
-        - [LinkedIn](https://www.linkedin.com/in/vigneshwaranit)
-        - [GitHub](https://github.com/RMKEC111722203119?tab=repositories)
-
-       
-        """
-    )
