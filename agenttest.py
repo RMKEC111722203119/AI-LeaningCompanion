@@ -7,7 +7,7 @@ from langchain_groq import ChatGroq
 
 from Quicklearn import process
 from geminifunc import get_gemini_repsonse, input_pdf_text
-from feed import display_popular_feed_item, display_uploaded_roadmap
+
 from grop import create_group, display_groups, add_roadmap_to_group, display_group_details, display_full_roadmap
 
 from homefeeds import run_feed, init_state, predefined_roadmaps
