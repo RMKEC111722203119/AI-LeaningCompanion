@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-import nest_asyncio
+
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from langchain_groq import ChatGroq
@@ -17,7 +17,6 @@ API_KEY = "AIzaSyASpU0qAf8xcDgZ6Wqdw-Ts8WJftF0cDFU"
 GROQ_API_KEY = "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"
 HUGGINGFACEHUB_API_TOKEN = "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"
 
-nest_asyncio.apply()
 
 st.set_page_config(page_title="AI Career Guidance", page_icon="🚀", layout="wide")
 
